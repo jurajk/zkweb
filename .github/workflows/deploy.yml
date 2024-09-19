@@ -30,7 +30,7 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: AbleLincoln/push-to-sftp@v1.5
+        uses: AbleLincoln/push-to-sftp@v1.0
         with:
           host: zimnykurz.sk
           port: 22
