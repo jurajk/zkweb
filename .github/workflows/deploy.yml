@@ -24,13 +24,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
       - name: Install dependencies
         run: npm install
       - name: Build site
         run: npm run build
       - name: Deploy to Server
-        uses: AbleLincoln/push-to-sftp@v1.2
+        uses: AbleLincoln/push-to-sftp@v1.0
         with:
           host: zimnykurz.sk
           port: 22
