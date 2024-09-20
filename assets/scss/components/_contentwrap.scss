@@ -1,7 +1,0 @@
-.contentwrap {
-	max-width: 100%;
-
-	@include breakpoint( medium ) {
-		@include xy-grid-container;
-	}
-}
