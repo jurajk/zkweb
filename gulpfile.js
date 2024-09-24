@@ -33,6 +33,7 @@ var paths = {
   twigTemplates: ["assets/twig/[^_]*.twig"],
   twigWatch: ["assets/twig/*.twig"],
   dest: "dist/",
+  cname: "CNAME",
 };
 
 gulp.task("clean", function () {
@@ -129,6 +130,7 @@ gulp.task(
       .pipe(gulp.dest(paths.dest + "files/"));
     gulp.src(paths.favicon, { encoding: false }).pipe(gulp.dest(paths.dest));
     gulp.src(paths.htaccess, { encoding: false }).pipe(gulp.dest(paths.dest));
+    gulp.src(paths.cname, { encoding: false }).pipe(gulp.dest(paths.dest));
     done();
   })
 );
