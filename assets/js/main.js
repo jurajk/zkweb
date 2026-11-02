@@ -37,8 +37,9 @@ jQuery(document).ready(function($) {
 	}
 
 	$('.apply__cta').on('click auxclick', function (e) {
-		if (!opensLink(e) || !window.CookieConsent || !gate || !gate.showModal) return;
-		if (CookieConsent.acceptedCategory('analytics')) {
+		if (!opensLink(e) || !gate || !gate.showModal) return;
+		// without CookieConsent (cookieconsent.umd.js blocked or not loaded) the notice shows every time
+		if (window.CookieConsent && CookieConsent.acceptedCategory('analytics')) {
 			trackSignupClick();    // the link opens the form in a new tab, as before
 			return;
 		}
@@ -49,9 +50,11 @@ jQuery(document).ready(function($) {
 
 	$('.js-gate-accept').on('click auxclick', function (e) {   // the link itself opens the form
 		if (!opensLink(e)) return;
-		var accepted = CookieConsent.getUserPreferences().acceptedCategories;
-		CookieConsent.acceptCategory(accepted.concat('analytics'));   // adds Analytické, keeps the rest as it was
-		CookieConsent.hide();    // acceptCategory() saves the choice but doesn't close the banner
+		if (window.CookieConsent) {
+			var accepted = CookieConsent.getUserPreferences().acceptedCategories;
+			CookieConsent.acceptCategory(accepted.concat('analytics'));   // adds Analytické, keeps the rest as it was
+			CookieConsent.hide();    // acceptCategory() saves the choice but doesn't close the banner
+		}
 		trackSignupClick();
 		gate.close();
 	});
