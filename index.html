@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="sk">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,6 +26,7 @@
 <meta name="twitter:image" content="/images/fb_share.png" />
 <meta name="twitter:title" content="Cestou Zimy, zimný kurz Pluska" />
 <meta name="twitter:description" content="Päť dní. Vonku a iba s tým, čo si nesieš na chrbte, s tým, čo si nesieš v sebe. Ty a skupina skvelých ľudí. Život bez nánosov civilizácie." />
+    <link rel="stylesheet" href="css/cookieconsent.css?v=3.2.1">
     <link rel="stylesheet" href="css/main.css?v=20191013">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
   </head>
@@ -362,6 +363,17 @@ pod zimnou hviezdnou oblohou, naučíš sa pohybovať na snežniciach a fungova�
       <p>Ak ti napadne akákoľvek otázka, ozvi sa na <strong>info.zimnykurz@plusko.net</strong> alebo volaj Freshovi na +421 915 845 455.</p>
     </div>
   </div>
+
+  
+  <dialog id="hubspot-gate" class="zk-gate" aria-labelledby="hubspot-gate-title" aria-describedby="hubspot-gate-text">
+    <button type="button" class="close-button js-gate-close" aria-label="Zavrieť"><span aria-hidden="true">&times;</span></button>
+    <h3 id="hubspot-gate-title" class="zk-gate__title">Prihláška je vo formulári HubSpot</h3>
+    <p id="hubspot-gate-text" class="zk-gate__text">Keď formulár otvoríš, HubSpot si uloží analytické cookies (__hstc, hubspotutk, __hssc, __hssrc, najdlhšie na 6 mesiacov). Ak s tým nesúhlasíš, napíš nám na info.zimnykurz@plusko.net a prihlásime ťa e-mailom.</p>
+    <div class="zk-gate__buttons">
+      <a href="https://share-eu1.hsforms.com/1dKJnEJo0SFeeFE7ytUD6zA2deo8m" title="Prihláška (nové okno)" class="button js-gate-accept" target="_blank">Súhlasím, otvoriť prihlášku</a>
+      <a href="mailto:info.zimnykurz@plusko.net?subject=Prihl%C3%A1%C5%A1ka%20Cestou%20Zimy%202027" class="button js-gate-mail">Napísať e-mail</a>
+    </div>
+  </dialog>
 </section>
   <section id="covid-info" class="section apply">
   <div class="grid-x grid-padding-x">
@@ -377,7 +389,14 @@ pod zimnou hviezdnou oblohou, naučíš sa pohybovať na snežniciach a fungova�
 </section></div>
 
 
+    <button type="button" class="cc-revisit" data-cc="show-preferencesModal" aria-label="Nastavenia cookies" title="Nastavenia cookies" hidden>
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+        <path fill="currentColor" fill-rule="evenodd" d="M21.6 11.2a3 3 0 0 1-3.4-3.4 3 3 0 0 1-3.6-3.6A2 2 0 0 1 13 1.7 10.4 10.4 0 1 0 22.3 11a2 2 0 0 1-.7.2ZM7.5 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm1 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6-1a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm-3-4.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+      </svg>
+    </button>
+
     <script src="js/jquery.min.js"></script>
+    <script src="js/cookieconsent.umd.js?v=3.2.1"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
