@@ -6,8 +6,8 @@
 * Nothing from Google loads before "Reklamné" is accepted, or while ZK_ADS_ID is empty.
 */
 
-var ZK_ADS_ID = '';            // 'AW-…' from Data manager → Google tag
-var ZK_CONVERSION_LABEL = '';  // from the "Klik na prihlášku" conversion action
+var ZK_ADS_ID = 'AW-946515347';                    // from Data manager → Google tag
+var ZK_CONVERSION_LABEL = 'qzxVCMrf77AdEJPbqsMD';  // from the "Klik na prihlášku" conversion action
 
 window.dataLayer = window.dataLayer || [];
 window.gtag = function () { window.dataLayer.push(arguments); };
