@@ -53,15 +53,4 @@
       <p>Ak ti napadne akákoľvek otázka, ozvi sa na <strong>{{ contactmail }}</strong> alebo volaj Freshovi na {{ contactphone }}.</p>
     </div>
   </div>
-
-  {# Shown by main.js on "Prihlás sa" until HubSpot (Analytické) cookies are accepted #}
-  <dialog id="hubspot-gate" class="zk-gate" aria-labelledby="hubspot-gate-title" aria-describedby="hubspot-gate-text">
-    <button type="button" class="close-button js-gate-close" aria-label="Zavrieť"><span aria-hidden="true">&times;</span></button>
-    <h3 id="hubspot-gate-title" class="zk-gate__title">Prihláška je vo formulári HubSpot</h3>
-    <p id="hubspot-gate-text" class="zk-gate__text">Keď formulár otvoríš, HubSpot si uloží analytické cookies (__hstc, hubspotutk, __hssc, __hssrc, najdlhšie na 6 mesiacov). Ak s tým nesúhlasíš, napíš nám na {{ contactmail }} a prihlásime ťa e-mailom.</p>
-    <div class="zk-gate__buttons">
-      <a href="{{ formlink }}" title="Prihláška (nové okno)" class="button js-gate-accept" target="_blank">Súhlasím, otvoriť prihlášku</a>
-      <a href="mailto:{{ contactmail }}?subject=Prihl%C3%A1%C5%A1ka%20Cestou%20Zimy%20{{ year }}" class="button js-gate-mail">Napísať e-mail</a>
-    </div>
-  </dialog>
 </section>
