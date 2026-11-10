@@ -22,11 +22,7 @@ var paths = {
     "assets/js/components/*.js",
     "assets/js/main.js",
   ],
-  copyScripts: [
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js",
-  ],
-  copyStyles: ["node_modules/vanilla-cookieconsent/dist/cookieconsent.css"],
+  copyScripts: ["node_modules/jquery/dist/jquery.min.js"],
   images: "assets/images/**/*.{png,jpg,jpeg,svg,gif}",
   files: "assets/files/**/*",
   favicon: "assets/favicon.ico",
@@ -143,7 +139,6 @@ gulp.task(
   "copyScripts",
   gulp.series(function (done) {
     gulp.src(paths.copyScripts).pipe(gulp.dest(paths.dest + "/js"));
-    gulp.src(paths.copyStyles).pipe(gulp.dest(paths.dest + "/css"));
     done();
   })
 );
