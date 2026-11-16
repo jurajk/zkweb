@@ -7682,6 +7682,17 @@ p.no-margin {
   font-size: 3rem;
   font-weight: bold;
 }
+.pricebox__referral {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #588d8c;
+  background-color: #d4e4e4;
+}
+.pricebox__referral-price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #588d8c;
+  white-space: nowrap;
+}
 
 .profile {
   display: -webkit-box;
