@@ -3,6 +3,8 @@
 	max-width: 100%;
 
 	&.intro {
+		// Clears the fixed .site-header
+		padding-top: rem-calc( 50 );
 		margin-bottom: 0;
 
 		@include breakpoint( medium ) {

@@ -12,6 +12,11 @@ a:not(.button):hover {
 	text-decoration: none;
 }
 
+// Keeps anchor targets clear of the fixed .site-header
+html {
+	scroll-padding-top: 60px;
+}
+
 body {
 	max-width: 100%;
 }
