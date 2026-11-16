@@ -9,6 +9,12 @@
 		height: auto;
 	}
 
+	// Landscape phones get the desktop layout, where 110vh is shorter than
+	// the content
+	@media (orientation: landscape) and (max-height: 32em) {
+		height: auto;
+	}
+
 	&__inner {
 		height: 100%;
 		@include xy-grid-container;
