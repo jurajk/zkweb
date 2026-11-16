@@ -53,6 +53,16 @@
 			line-height: rem-calc( 32 );
 		}
 
+		// Enlarges the tap target to 44×44 px without changing the look
+		&::after {
+			content: '';
+			position: absolute;
+			top: rem-calc( -5 );
+			right: rem-calc( -5 );
+			bottom: rem-calc( -5 );
+			left: rem-calc( -5 );
+		}
+
 		.menuopen & {
 			background-color: $primary-color;
 			&::before {
