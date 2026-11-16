@@ -30,12 +30,4 @@
 			padding-left: rem-calc(20);
 		}
 	}
-
-	&__name {
-		display: none;
-
-		@include breakpoint( medium ) {
-			display: block;
-		}
-	}
 }
