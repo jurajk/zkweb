@@ -1,24 +1,24 @@
 {% set images = [
-  'cestouzimy-17.jpg',
-  'cestouzimy-203.jpg',
-  'cestou_zimy_2019_1.jpg',
-  'cestouzimy-564.jpg',
-  'zimnykurz-4.jpg',
-  'cestouzimy-248.jpg',
-  'cestou_zimy_2019_3.jpg',
-  'cestouzimy-393.jpg',
-  'cestouzimy-502.jpg',
-  'cestou_zimy_2019_5.jpg',
-  'cestou_zimy_2019_4.jpg',
-  'zimnykurz-10.jpg',
-  'zimnykurz-11.jpg',
-  'zimnykurz-16.jpg',
-  'zimnykurz-18.jpg',
-  'zimnykurz-6.jpg',
-  'zimnykurz-8.jpg',
-  'zk_put-6204.jpg',
-  'zk_put-6372.jpg',
-  'cestou_zimy_2019_2.jpg',
+  { file: 'cestouzimy-17.jpg', alt: 'Účastníci sa smejú pri vážení batohu' },
+  { file: 'cestouzimy-203.jpg', alt: 'Skupina kráča v hustej hmle' },
+  { file: 'cestou_zimy_2019_1.jpg', alt: 'Stany v snehu pod hviezdnou oblohou' },
+  { file: 'cestouzimy-564.jpg', alt: 'Zohrievanie nôh pri ohni' },
+  { file: 'zimnykurz-4.jpg', alt: 'Parujúci hrniec na variči medzi termoskami' },
+  { file: 'cestouzimy-248.jpg', alt: 'Dvaja turisti na zasneženom chodníku v hmle' },
+  { file: 'cestou_zimy_2019_3.jpg', alt: 'Stavanie iglu v zasneženej doline' },
+  { file: 'cestouzimy-393.jpg', alt: 'Účastníci kurzu na zasneženej lúke' },
+  { file: 'cestouzimy-502.jpg', alt: 'Rozosmiata skupina v žltých vestách v zasneženom lese' },
+  { file: 'cestou_zimy_2019_5.jpg', alt: 'Námraza na kukle a okuliaroch vo fujavici' },
+  { file: 'cestou_zimy_2019_4.jpg', alt: 'Skupina s gitarou pri nočnom ohni' },
+  { file: 'zimnykurz-10.jpg', alt: 'Účastníčka píli drevo na oheň' },
+  { file: 'zimnykurz-11.jpg', alt: 'Stany v snehu na zimnom kurze' },
+  { file: 'zimnykurz-16.jpg', alt: 'Putovanie po zasneženom hrebeni' },
+  { file: 'zimnykurz-18.jpg', alt: 'Snežnice zapichnuté v snehu' },
+  { file: 'zimnykurz-6.jpg', alt: 'Rad ľudí kráča cez zasneženú lúku pod skalnatým vrchom' },
+  { file: 'zimnykurz-8.jpg', alt: 'Skupina s paličkami pripravená na cestu' },
+  { file: 'zk_put-6204.jpg', alt: 'Stan v snehu v lúčoch slnka' },
+  { file: 'zk_put-6372.jpg', alt: 'Účastníčka robí rukami srdce na zasneženom vrchole' },
+  { file: 'cestou_zimy_2019_2.jpg', alt: 'Skupina na snežniciach vo fujavici pri kríži' },
 ] %}
 
 <section class="section coursegallery">
@@ -26,7 +26,7 @@
     <div class="gallery">
       <div class="grid-sizer"></div>
       {% for image in images %}
-        <a href="/images/gallery/{{image}}" class="gallery__item"><img src="/images/gallery/thumbs/{{image}}" alt="" width="280" height="185" loading="lazy"></a>
+        <a href="/images/gallery/{{ image.file }}" class="gallery__item"><img src="/images/gallery/thumbs/{{ image.file }}" alt="{{ image.alt }}" width="280" height="185" loading="lazy"></a>
       {% endfor %}
     </div>
   </div>

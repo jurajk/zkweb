@@ -70,7 +70,7 @@
     {% for i, member in members %}
           <div class="cell profiles__profile profile">
             <div class="profile__imgpart">
-              <img src="/images/{{ member.image }}" width="100" height="100" class="profile__image" />
+              <img src="/images/{{ member.image }}" alt="{{ member.name }}" width="100" height="100" class="profile__image" />
             </div>
             <div class="profile__textpart">
               <h4 class="profile__name">{{ member.name }}</h4>
