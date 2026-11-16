@@ -31,9 +31,38 @@
 		}
 	}
 
+	// Masonry is off, so the widths above don't apply to the inline links
+	@include breakpoint( small only ) {
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat( 2, 1fr );
+			gap: rem-calc( 4 );
+		}
+
+		.grid-sizer {
+			display: none;
+		}
+
+		.gallery__item {
+			width: auto;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
 	.gallery__item {
 		opacity: 1;
 		transition: .5s ease;
+
+		// Six thumbnails are 1–2 px taller than the 280×185 the HTML declares;
+		// crop them to it, so lazy loading doesn't shift the page
+		img {
+			aspect-ratio: 280 / 185;
+			object-fit: cover;
+		}
 
 		&:hover {
 			opacity: 0.75;
