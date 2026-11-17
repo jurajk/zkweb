@@ -70,3 +70,9 @@
 
 	}
 }
+
+// gallery.js turns horizontal swipes in the lightbox into previous/next, so
+// switch off the browser's own swipe-to-go-back while the lightbox is open
+html:has(.mfp-wrap) {
+	overscroll-behavior-x: none;
+}
