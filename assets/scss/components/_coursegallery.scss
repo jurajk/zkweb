@@ -18,20 +18,7 @@
 		}
 	}
 
-	.grid-sizer,
-	.gallery__item {
-		width: 50%;
-
-		@include breakpoint( medium ) {
-			width: 33%;
-		}
-
-		@include breakpoint( large ) {
-			width: 20%;
-		}
-	}
-
-	// Masonry is off, so the widths above don't apply to the inline links
+	// Two columns on phones; wider screens show the 280 px thumbnails inline
 	@include breakpoint( small only ) {
 		.gallery {
 			display: grid;
@@ -39,17 +26,9 @@
 			gap: rem-calc( 4 );
 		}
 
-		.grid-sizer {
-			display: none;
-		}
-
-		.gallery__item {
-			width: auto;
-
-			img {
-				display: block;
-				width: 100%;
-			}
+		.gallery__item img {
+			display: block;
+			width: 100%;
 		}
 	}
 

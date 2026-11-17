@@ -46,15 +46,3 @@ jQuery(document).ready(function ($) {
       }
     });
 });
-
-// init Masonry
-// var $grid = $('.gallery').masonry({
-//   itemSelector: '.gallery__item',
-//   // use element for option
-//   columnWidth: '.grid-sizer',
-//   percentPosition: true
-// });
-// // layout Masonry after each image loads
-// $grid.imagesLoaded().progress( function() {
-//   $grid.masonry('layout');
-// });

@@ -24,7 +24,6 @@
 <section class="section coursegallery">
   <div class="coursegallery__gallery">
     <div class="gallery">
-      <div class="grid-sizer"></div>
       {% for image in images %}
         <a href="/images/gallery/{{ image.file }}" class="gallery__item"><img src="/images/gallery/thumbs/{{ image.file }}" alt="{{ image.alt }}" width="280" height="185" loading="lazy"></a>
       {% endfor %}
