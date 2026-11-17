@@ -20,4 +20,12 @@
 		}
 	}
 
+	// The note under the parts is outside the grid, so on phones it gets the
+	// parts' 10 px side margin as padding instead of touching the screen edge
+	&__note {
+		@include breakpoint( small only ) {
+			padding: 0 rem-calc( 10 );
+		}
+	}
+
 }
