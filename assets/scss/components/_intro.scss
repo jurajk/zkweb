@@ -75,6 +75,8 @@
 	}
 
 	&__photo {
+		// Full width: undoes the grid container's padding and the cell's margin,
+		// 10 + 10 px on each side with the small grid gutters in _settings.scss
 		display: block;
 		width: calc( 100% + #{rem-calc( 40 )} );
 		max-width: none;
