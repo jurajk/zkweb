@@ -12,9 +12,10 @@ a:not(.button):hover {
 	text-decoration: none;
 }
 
-// Keeps anchor targets clear of the fixed .site-header
+// Keeps anchor targets clear of the fixed .site-header (sized in rem, so this
+// follows the browser's font size too); smooth-scroll.js reads it as well
 html {
-	scroll-padding-top: 60px;
+	scroll-padding-top: rem-calc( 60 );
 }
 
 body {

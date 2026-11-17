@@ -18,8 +18,10 @@ jQuery(document).ready(function($) {
 	      if (target.length) {
 	        // Only prevent default if animation is actually gonna happen
 	        event.preventDefault();
+	        // Clear the fixed header like native anchor jumps do (_common.scss)
+	        var headerOffset = parseFloat($('html').css('scroll-padding-top')) || 60;
 	        $('html, body').animate({
-	          scrollTop: (target.offset().top - 60)
+	          scrollTop: (target.offset().top - headerOffset)
 	        }, 1000, function() {
 	          // Callback after animation
 	          // Must change focus!
