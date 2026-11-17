@@ -8,18 +8,24 @@
 
 	&__navigation {
 
-		transition: max-height 1s;
+		// Closing is quick, as the open menu covers the page, and the closed
+		// menu's links are hidden from Tab and screen readers
+		transition: max-height .3s, visibility 0s .3s;
 		overflow: hidden;
 		max-height: 0;
+		visibility: hidden;
 
 		.menuopen & {
 			display: flex;
 			align-items: center;
 			max-height: 999px;
+			visibility: visible;
+			transition: max-height 1s;
 		}
 
 		@include breakpoint( medium ) {
 			max-height: none;
+			visibility: visible;
 		}
 	}
 
