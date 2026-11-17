@@ -2,6 +2,11 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	// A fixed box doesn't scroll with the page, so on very short screens the
+	// open menu scrolls inside the header
+	max-height: 100vh;
+	max-height: 100dvh;
+	overflow-y: auto;
 	z-index: 2;
 	background: $body-background;
 	box-shadow: 0 1px 0 $primary-color;
@@ -90,8 +95,10 @@
 
 	@include breakpoint( medium ) {
 		height: rem-calc( 60 );
+		max-height: none;
+		overflow-y: visible;
 		line-height: rem-calc( 60 );
 		background: $primary-color;
 		box-shadow: none;
-	} 
+	}
 }
