@@ -18,18 +18,21 @@ jQuery(document).ready(function($) {
 	      if (target.length) {
 	        // Only prevent default if animation is actually gonna happen
 	        event.preventDefault();
+	        // Clear the fixed header like native anchor jumps do (_common.scss)
+	        var headerOffset = parseFloat($('html').css('scroll-padding-top')) || 60;
 	        $('html, body').animate({
-	          scrollTop: (target.offset().top - 60)
+	          scrollTop: (target.offset().top - headerOffset)
 	        }, 1000, function() {
 	          // Callback after animation
-	          // Must change focus!
+	          // Must change focus! Natively: once jQuery's .focus() has failed on
+	          // an element, it ignores the element after it gets a tabindex
 	          var $target = $(target);
-	          $target.focus();
+	          $target[0].focus();
 	          if ($target.is(":focus")) { // Checking if the target was focused
 	            return false;
 	          } else {
 	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-	            $target.focus(); // Set focus again
+	            $target[0].focus(); // Set focus again
 	          };
 	        });
 	      }

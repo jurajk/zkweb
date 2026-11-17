@@ -1,11 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="sk">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{ block('title') }} | </title>
-    <meta name="description" content="">
+    <title>{{ block('title') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -14,14 +13,15 @@
 
     {% include '_social_markup.twig' %}
 
-    <link rel="stylesheet" href="css/main.css?v=20191013">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600|Open+Sans&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css?v=20261117">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&amp;family=Titillium+Web:wght@600&amp;display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="site-header js-site-header">
       <div class="grid-container">
         <div class="grid-x">
-          <button class="site-header__menutoggle js-menutoggle"></button>
+          <button class="site-header__menutoggle js-menutoggle" aria-label="Menu" aria-expanded="false"></button>
           <div class="cell small-12 medium-2 large-3"><h1 class="site-header__title">Cestou Zimy</h1></div>
           <div class="cell medium-10 large-9 site-header__navigation">
             <nav class="site-navigation">
@@ -40,7 +40,7 @@
     {% block page %}{% endblock %}
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20261117"></script>
   </body>
 </html>
 

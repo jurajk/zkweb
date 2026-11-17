@@ -1,32 +1,48 @@
 .site-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	// A fixed box doesn't scroll with the page, so on very short screens the
+	// open menu scrolls inside the header
+	max-height: 100vh;
+	max-height: 100dvh;
+	overflow-y: auto;
+	z-index: 2;
+	background: $body-background;
+	box-shadow: 0 1px 0 $primary-color;
+
 	&__navigation {
 
-		transition: max-height 1s;
+		// Closing is quick, as the open menu covers the page, and the closed
+		// menu's links are hidden from Tab and screen readers
+		transition: max-height .3s, visibility 0s .3s;
 		overflow: hidden;
 		max-height: 0;
+		visibility: hidden;
 
 		.menuopen & {
 			display: flex;
 			align-items: center;
-			border-bottom: 1px solid $primary-color;
 			max-height: 999px;
+			visibility: visible;
+			transition: max-height 1s;
 		}
 
 		@include breakpoint( medium ) {
 			max-height: none;
-			border-bottom: none !important;
+			visibility: visible;
 		}
 	}
 
 	&__title {
 		text-align: left;
-		margin-top: rem-calc( 8 );
+		margin: 0;
 		font-size: rem-calc( 24 );
+		line-height: rem-calc( 50 );
 
 		@include breakpoint( medium ) {
 			font-size: rem-calc( 16 );
 			line-height: rem-calc( 60 );
-			margin: 0;
 			white-space: nowrap;
 			color: $white;
 		}
@@ -53,6 +69,16 @@
 			line-height: rem-calc( 32 );
 		}
 
+		// Enlarges the tap target to 44×44 px without changing the look
+		&::after {
+			content: '';
+			position: absolute;
+			top: rem-calc( -5 );
+			right: rem-calc( -5 );
+			bottom: rem-calc( -5 );
+			left: rem-calc( -5 );
+		}
+
 		.menuopen & {
 			background-color: $primary-color;
 			&::before {
@@ -68,12 +94,11 @@
 	}
 
 	@include breakpoint( medium ) {
-		position: fixed;
-		top: 0;
-		width: 100%;
 		height: rem-calc( 60 );
+		max-height: none;
+		overflow-y: visible;
 		line-height: rem-calc( 60 );
-		z-index: 2;
 		background: $primary-color;
-	} 
+		box-shadow: none;
+	}
 }

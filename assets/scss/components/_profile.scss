@@ -26,16 +26,14 @@
 	}
 
 	&__textpart {
+		// The profiles grid has no gutters, so on phones the text would touch
+		// the screen edge; 10 px matches the other text
+		@include breakpoint( small only ) {
+			padding: 0 rem-calc( 10 );
+		}
+
 		@include breakpoint( medium ) {
 			padding-left: rem-calc(20);
-		}
-	}
-
-	&__name {
-		display: none;
-
-		@include breakpoint( medium ) {
-			display: block;
 		}
 	}
 }
