@@ -7,6 +7,7 @@
  {
     name: 'Standa',
     image: 'standa.jpg',
+    lang: 'cs',
     bio: 'Standa je v našem teamu nováček. Pravidelně se objevuje na horách hlavně v doprovodu nějaké skupinky lidí, neboť jedním z jeho zaměstnání je průvodcovská činnost. Rád se o lidi stará, učí je, jak se pohybovat v různých ročních obdobích v různých terénech. A rád kope za svou domovskou organizaci - Skaut :)',
   },
   {
@@ -74,7 +75,7 @@
             </div>
             <div class="profile__textpart">
               <h4 class="profile__name">{{ member.name }}</h4>
-              <p class="profile__bio">{{ member.bio }}</p>
+              <p class="profile__bio"{% if member.lang %} lang="{{ member.lang }}"{% endif %}>{{ member.bio }}</p>
             </div>
           </div>
       {% if i == 3 %}
