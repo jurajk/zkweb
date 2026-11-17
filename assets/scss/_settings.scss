@@ -75,7 +75,9 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $snow-white: #ededed;
-$zk-blue: #588d8c;
+// Darker than the original #588d8c, so text on $snow-white is 4.65:1
+// and white button text 5.4:1 (WCAG AA asks for 4.5:1)
+$zk-blue: #467170;
 $foundation-palette: (
   primary: $zk-blue,
   secondary: #767676,

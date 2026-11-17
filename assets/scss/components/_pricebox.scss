@@ -8,7 +8,8 @@
 	&__referral {
 		padding: rem-calc( 12 16 );
 		border-left: 4px solid $primary-color;
-		background-color: scale-color( $primary-color, $lightness: 75% );
+		// Light enough for 4.5:1 with the teal text on it
+		background-color: scale-color( $primary-color, $lightness: 85% );
 	}
 
 	&__referral-price {
